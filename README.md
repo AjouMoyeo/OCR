@@ -5,11 +5,14 @@ https://drive.google.com/file/d/1VPKzY06xnAi3Q15FNPqcqzsovA1Jjrf_/view?usp=shari
 
 
 1. 링크가서 pth파일 다운
-2. OCR디렉토리에 넣고
-3. image 폴더(없으면 만들고)에 인식할 학생증 사진 넣고
-4. OCR.py 실행
-5. 실행하면 image_result에 recognition할 이미지들이 생기고
-6. result.txt에 recognition한 결과나와있음
+2. 깃클론하고
+3. OCR/OCR에 pth 넣고
+4. image, image_localized, image_result 디렉토리를 만든다(빈 디렉토리는 깃헙에 안올라가나봅니다)
+5. image 폴더에 인식할 학생증 사진 넣고
+6. OCR.py 실행
+7. 실행하면 image_result에 recognition할 이미지들이 생기고
+8. result.txt에 recognition한 결과나와있음
 
+모든 작업은 OCR/OCR디렉토리 상에서 하면 됨
 
 모델 개선해야함.
