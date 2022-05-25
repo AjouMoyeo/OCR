@@ -2,9 +2,9 @@
 학생증인식
 
 https://drive.google.com/file/d/1VPKzY06xnAi3Q15FNPqcqzsovA1Jjrf_/view?usp=sharing
+https://drive.google.com/file/d/1D9PiYRDX7lsTQar51CS5-TFFeAHkyu8p/view?usp=sharing
 
-
-1. 링크가서 pth파일 다운
+1. 링크가서 pth파일 2개(korean_g2, craft)다운
 2. 깃클론하고
 3. OCR/OCR에 pth 넣고
 4. image, image_localized, image_result 디렉토리를 만든다(빈 디렉토리는 깃헙에 안올라가나봅니다)
