@@ -33,8 +33,10 @@ for i in range(len(test_file)):
 
 
 
-subprocess.call("demo.py --Transformation None --FeatureExtraction VGG --SequenceModeling BiLSTM --Prediction CTC --image_folder image_localized/ --saved_model korean_g2.pth", shell=True)
+#subprocess.call("demo.py --Transformation None --FeatureExtraction VGG --SequenceModeling BiLSTM --Prediction CTC --image_folder image_localized/ --saved_model korean_g2.pth", shell=True)
 
 
-
+subprocess.call("tesseract.py", shell=True)
 #출력문 분석하기, 출력문 txt파일로 저장하기
+
+subprocess.call("extraction.py", shell=True)
