@@ -11,15 +11,15 @@ from PIL import Image
 import subprocess
 
 
-subprocess.call("test.py --trained_model=./craft_mlt_25k.pth --test_folder=./test", shell=True)
+subprocess.call("test.py --trained_model=./craft_mlt_25k.pth --cuda False --test_folder=./image", shell=True)
 
 
-test_file = glob.glob('./test/*.jpg')
+test_file = glob.glob('./image/*.jpg')
 print(test_file[0][:-4])
 
 
 for i in range(len(test_file)):
-    tmp_string = test_file[i].replace('test', 'result')
+    tmp_string = test_file[i].replace('image', 'image_result')
     box_list = pd.read_table(tmp_string[:-4] + '_res.txt', sep=',', header = None)
     box_df = pd.DataFrame(box_list)
     tmp_img = Image.open(test_file[i])

@@ -44,5 +44,5 @@ for file in file_list:
     os.remove(filename)
 
 
-    with open("result.txt", 'a') as f:
+    with open("result.txt", 'a', encoding = 'utf-8') as f:
         f.write(text)

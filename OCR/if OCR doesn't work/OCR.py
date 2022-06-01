@@ -12,6 +12,7 @@ import subprocess
 
 
 
+
 subprocess.call("test.py --trained_model=./craft_mlt_25k.pth --cuda False --test_folder=./image", shell=True)
 
 test_file = glob.glob('./image/*.jpg')

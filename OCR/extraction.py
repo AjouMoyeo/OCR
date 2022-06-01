@@ -1,10 +1,13 @@
 import os
+import json
+from collections import OrderedDict
+
 
 eng_char = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 info_dic = {'name':'', 'std_id':'', 'birth':'', 'department':'', 'college':'', 'is_ajou':'no'}
 
-with open("result.txt", 'r') as f:
+with open("result.txt", 'r', encoding = 'utf-8') as f:
     lines = f.readlines()
     ajou_flag=0  ###### flag for AJOU
     for line in lines:
@@ -44,6 +47,35 @@ if ajou_flag == 0:
     info_dic = {'name':'', 'std_id':'', 'birth':'', 'department':'', 'college':'', 'is_ajou':'no'}
 else:
     info_dic['is_ajou'] = 'yes'
-with open('info.txt', 'w') as f:
+with open('info.txt', 'w', encoding = 'utf-8') as f:
     for key in info_dic.keys():
         f.write(key + ' ' + info_dic[key] + '\n')
+
+
+file_data = OrderedDict()
+if ajou_flag == 0:
+    file_data["name"] = ""
+    file_data["std_id"] = ""
+    file_data["birth"] = ""
+    file_data["department"] = ""
+    file_data["college"] = ""
+    file_data["is_ajou"] = info_dic['is_ajou']
+else:
+    file_data["name"] = info_dic['name']
+    file_data["std_id"] = info_dic['std_id']
+    file_data["birth"] = info_dic['birth']
+    file_data["department"] = info_dic['department']
+    file_data["college"] = info_dic['college']
+    file_data["is_ajou"] = info_dic['is_ajou']
+
+
+
+
+with open('info.json', 'w', encoding = "utf-8") as make_file:
+    json.dump(file_data, make_file, ensure_ascii=False, indent="\t")
+
+
+
+
+
+
